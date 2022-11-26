@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: " login to dockerhub"
-        run: docker login --username ${{ secrets.DOCKERMAIL1 }} --password ${{ secrets.DOCKERPASSWORD1 }}
+        run: docker login --username ${{ secrets.DOCKERMAIL1}} --password ${{ secrets.DOCKERPASSWORD1}}
       - name: " building docker "
         run: docker build -t ${{secrets.DOCKERMAIL1}}/javat:dev .
       - name: " pushing to docker hub "
